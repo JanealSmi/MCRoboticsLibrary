@@ -14,5 +14,5 @@ for example using and if statement we can create a condition where a button bein
     return 0;
     }
     
-This allows for things like loops or safeguards to get out of a loop (while and if loops)
+This allows for things like initiating code as show or safeguards to get out of a loop (while and if loops)
 Sensors like the bump, or even the built in buttons on the IED and bot can be used!
