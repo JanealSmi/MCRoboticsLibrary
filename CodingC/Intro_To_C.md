@@ -15,6 +15,7 @@ When first opening the IDE you will find
 
 ```
 Here the code shows the #includes which a allow the code to access the kipr library
+
 Do not delete these, they are required for any code to function!
 
 From the int ``main(){ ``down to the ``return 0; }`` is where any active code being down by the robot will go, anything written outside of these lines will not be read or acted by the robot.
