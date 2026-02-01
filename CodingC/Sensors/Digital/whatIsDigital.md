@@ -2,10 +2,10 @@ Digital acts as a condition with the only datd it can receive being 1 or 0 (true
 
 Sensors like a button have only two states/values, is it or is it not pressed
 
-for example using and if statement we can create a condition where a button being pressed will run a line of code:]
+for example using an `if` and `digital(port)` statement we can create a condition where a button being pressed will run a line of code:]
 
     int main(0){
-    if (digital(0) == 1){
+    if (digital(0) == 1){ // <-- replace the word port with the sensor you wish to use
     
     motor(0,100);
     motor(3,100);
