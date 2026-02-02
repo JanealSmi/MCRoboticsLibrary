@@ -1,4 +1,4 @@
-Functions act as a useful and necessary tool to learn, not only to make coding easier to do, but also to read.
+Functions act as a useful and necessary tool to learn, not only to make coding easier to write, but also to read.
 Hard coding, while reliable in some part, is difficult and makes writing the repeptitive lines of code simpler.
 
 To write functions we must know how to both write and "call" them, using:
@@ -40,16 +40,35 @@ This would look like this:
 
     #include <stdio.h>  
     #include <kipr/wombat.h>
+    
     void drive(int power, int time){
       motor(0,power);
       motor(3,power);
       msleep(time);
     }
+    
     int main(){
     drive(100,5000);
+    
     return 0;
     }
 
 Here we see the robot would drive for 5 seconds at 100 power in both wheels, and this is done only with one line of code in the `int main()`
 
-The same can be done for servos and just about any function needed for these two parts like turning or even specified motions using mechano wheels
+The same can be done for servos and just about any function needed for these two parts like turning or even specified motions using mechano wheels,
+
+    #include <stdio.h>  
+    #include <kipr/wombat.h>
+    
+    void claw(int degrees){  <-- named claw to control the open or closed position
+      enable_servos();
+      set_servo_position(0, degrees); <-- servo port is constant while the degree/position can be changed
+      msleep(100); <-- time in servos is pretty irrelevant but required to work
+      disable_servos(); <-- turning off to conserve power
+    }
+    
+    int main(){
+    claw(2000); <-- sets the claw to the position at 2000
+    
+    return 0;
+    }
